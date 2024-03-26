@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td><input type="hidden" ng-model="idSanPham"></td>
+        <td><input type="hidden" ng-model="TenSanPham"></td>
+        <td><input type="hidden" ng-model="LoaiSanPham"></td>
+        <td><input type="hidden" ng-model="GiaGoc"></td>
+        <td><input type="hidden" ng-model="GiaGiam"></td>
+        <td><input type="hidden" ng-model="imgg"></td>
+      </tr>
+    </table>
+    <div
+      class="row container"
+      style="margin-top: 20px; margin-bottom: 20px; margin-left: 100px"
+    >
+      <div class="col-6">
+        <img
+          style="
+            float: right;
+            margin-left: 0px;
+            width: 500px;
+            height: 500px;
+            border-radius: 30px;
+          "
+          src="{{imgg}}"
+          
+          alt=""
+        />
+      </div>
+      <div class="col-6">
+        <h2>{{TenSanPham}}</h2>
+        <hr />
+        <h5>Một sản phẩm cực kì sịn</h5>
+        <h5>Hãy mua và đeo nó vì nó rất sịn</h5>
+        <h5>Sịn sịn sịn vo =))))</h5>
+        <br />
+        <h5>Rẻ như bữa ăn sáng của ng giàu 😂</h5>
+        <br />
+        <h5>Mua đi ko hết</h5>
+        <br />
+        <h5>Bạn mua ko ạ??? Không ư!!!!!!! Tôi cũng thế</h5>
+        
+        <p>
+          Số lượng có hạn chỉ <strong style="color: red">10000</strong> chiếc
+          =)))))
+        </p>
+        <p style="font-size: 30px">
+          Giá chỉ :
+          <strong style="color: brown">{{GiaGiam}} $</strong> 
+        </p>
+        <hr />
+        <button
+          class="btn"
+          style="
+            background-color: rgb(208, 128, 128);
+            color: aliceblue;
+            font-size: larger;
+          "
+          ng-click="MuaHang()"
+          onclick="btnMuaHang()"
+        >
+          Mua luôn!!!
+        </button>
+        <button
+          class="btn"
+          style="
+            background-color: rgb(248, 248, 248);
+            color: rgb(238, 0, 0);
+            font-size: larger;
+          "
+          ng-click="NemVaoGio()"
+          onclick="nemVaoGio()"
+        >
+          Ném vào giỏ
+        </button>
+
+        <style>
+          h5 {
+            color: gray;
+          }
+          button {
+            width: 200px;
+            height: 50px;
+            border-radius: 30px;
+          }
+          .btn {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            font-size: 16px;
+            border: none;
+            /* overflow: hidden;
+            transition: transform 0.3s ease-in; */
+          }
+          .btn:hover {
+            /* transform: translateY(-10px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); */
+          }
+        </style>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="text-align: center;">Đổi mật khẩu</h2>
+   <table align="center">
+    <tr>
+        <td><label for="username">Tài khoản:</label></td>
+        <td><input type="text" ng-model="TaiKhoan"></td>
+    </tr>
+    <tr>
+        <td><label for="password">Mật khẩu:</label></td>
+        <td><input type="password" ng-model="MatKhau"></td>
+    </tr>
+    <tr>
+        <td>  <label for="password_confirm">Nhập lại mật khẩu:</label></td>
+        <td><input type="password" ng-model="NhapLaiMatKhau"  name="password_confirm"></td>
+    </tr>
+    <tr>
+        <td></td>
+    <td> <button class="btnn" style="width: 500px; border-radius:30px ;height:040px;" ng-click="nutDoiMatKhau()">Đổi mật khẩu</button></td>
+</tr>
+   
+   </table>
+      <style>
+        input{
+            width: 500px;
+        }
+        textarea{
+            width: 500px;
+            height: 50px;
+        }
+        .btnn:hover{
+            background-color: rgb(238, 131, 238);
+            color: aliceblue;
+            font-size: larger;
+        }
+        a{
+            text-decoration: wavy;
+            color: black;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+      </style>  
+</body>
+</html>

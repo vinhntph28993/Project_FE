@@ -1,0 +1,378 @@
+{
+  "sanPham": [
+    {
+      "id": "SP1",
+      "tenSanPham": "Vòng tay nữ",
+      "img": "imgs/anhSanPham/vong_lac_1.png",
+      "giaGoc": 2000,
+      "loai": "vongLac",
+      "giaGiam": 1950
+    },
+    {
+      "id": "SP2",
+      "tenSanPham": "Vòng tay nữ 2",
+      "img": "imgs/anhSanPham/vong_lac_2.png",
+      "giaGoc": 1900,
+      "loai": "vongLac",
+      "giaGiam": 1456
+    },
+    {
+      "id": "SP3",
+      "tenSanPham": "Vòng tay nữ 3",
+      "img": "imgs/anhSanPham/vong_lac_3.png",
+      "giaGoc": 1500,
+      "loai": "vongLac",
+      "giaGiam": 1247
+    },
+    {
+      "tenSanPham": "Vòng tay nữ 4",
+      "loai": "vongLac",
+      "giaGoc": 1700,
+      "giaGiam": 1047,
+      "img": "imgs/anhSanPham/4.png",
+      "id": "SP4"
+    },
+    {
+      "tenSanPham": "Vòng tay nữ 5",
+      "loai": "vongLac",
+      "giaGoc": 1700,
+      "giaGiam": 1051,
+      "img": "imgs/anhSanPham/vong_lac_5.png",
+      "id": "SP45"
+    },
+    {
+      "tenSanPham": "Vòng tay nữ 6",
+      "loai": "vongLac",
+      "giaGoc": 1700,
+      "giaGiam": 1147,
+      "img": "imgs/anhSanPham/vong_lac_6.png",
+      "id": "SP6"
+    },
+    {
+      "id": "SP7",
+      "tenSanPham": "Vòng tay nữ 7",
+      "img": "imgs/anhSanPham/vong_lac_7.png",
+      "giaGoc": 1700,
+      "loai": "vongLac",
+      "giaGiam": 1159
+    },
+    {
+      "id": "SP8",
+      "tenSanPham": "Vòng tay nữ 8",
+      "img": "imgs/anhSanPham/vong_lac_8.png",
+      "giaGoc": 1700,
+      "loai": "vongLac",
+      "giaGiam": 1147
+    },
+    {
+      "id": "SP9",
+      "tenSanPham": "Dây chuyền nữ 1",
+      "img": "imgs/anhSanPham/dayChuyen1.webp",
+      "giaGoc": 1700,
+      "loai": "dayChuyen",
+      "giaGiam": 1201
+    },
+    {
+      "id": "SP10",
+      "tenSanPham": "Dây chuyền nữ 2",
+      "img": "imgs/anhSanPham/dayChuyen2.png",
+      "giaGoc": 1845,
+      "loai": "dayChuyen",
+      "giaGiam": 1753
+    },
+    {
+      "id": "SP11",
+      "tenSanPham": "Dây chuyền nữ 3",
+      "img": "imgs/anhSanPham/dayChuyen3.png",
+      "giaGoc": 1700,
+      "loai": "dayChuyen",
+      "giaGiam": 1478
+    },
+    {
+      "id": "SP12",
+      "tenSanPham": "Dây chuyền nữ 4",
+      "img": "imgs/anhSanPham/dayChuyen4.jfif",
+      "giaGoc": 1700,
+      "loai": "dayChuyen",
+      "giaGiam": 1458
+    },
+    {
+      "id": "SP13",
+      "tenSanPham": "Dây chuyền nữ 5",
+      "img": "imgs/anhSanPham/dayChuyen5.jfif",
+      "giaGoc": 1800,
+      "loai": "dayChuyen",
+      "giaGiam": 1753
+    },
+    {
+      "id": "SP14",
+      "tenSanPham": "Dây chuyền nữ 6",
+      "img": "imgs/anhSanPham/dayChuyen6.jfif",
+      "giaGoc": 1700,
+      "loai": "dayChuyen",
+      "giaGiam": 1263
+    },
+    {
+      "id": "SP15",
+      "tenSanPham": "Dây chuyền nữ 7",
+      "img": "imgs/anhSanPham/dayChuyen7.jfif",
+      "giaGoc": 1700,
+      "loai": "dayChuyen",
+      "giaGiam": 1369
+    },
+    {
+      "id": "SP16",
+      "tenSanPham": "Dây chuyền nữ 8",
+      "img": "imgs/anhSanPham/dayChuyen8.jfif",
+      "giaGoc": 1700,
+      "loai": "dayChuyen",
+      "giaGiam": 1498
+    },
+    {
+      "id": "SP17",
+      "tenSanPham": "Dây chuyền nữ 9",
+      "img": "imgs/anhSanPham/dayChuyen9.jfif",
+      "giaGoc": 1700,
+      "loai": "dayChuyen",
+      "giaGiam": 1753
+    },
+    {
+      "id": "SP18",
+      "tenSanPham": "Dây chuyền nữ 10",
+      "img": "imgs/anhSanPham/dayChuyen10.jfif",
+      "giaGoc": 1700,
+      "loai": "dayChuyen",
+      "giaGiam": 1458
+    },
+    {
+      "id": "SP19",
+      "tenSanPham": "Dây chuyền nữ 11",
+      "img": "imgs/anhSanPham/dayChuyen11.jfif",
+      "giaGoc": 1700,
+      "loai": "dayChuyen",
+      "giaGiam": 1597
+    },
+    {
+      "id": "SP20",
+      "tenSanPham": "Bông tai nữ 1",
+      "img": "imgs/anhSanPham/bongTai1.jfif",
+      "giaGoc": 1700,
+      "loai": "bongTai",
+      "giaGiam": 1147
+    },
+    {
+      "id": "SP21",
+      "tenSanPham": "Bông tai nữ 2",
+      "img": "imgs/anhSanPham/bongTai2.jfif",
+      "giaGoc": 1700,
+      "loai": "bongTai",
+      "giaGiam": 1114
+    },
+    {
+      "id": "SP22",
+      "tenSanPham": "Bông tai nữ 3",
+      "img": "imgs/anhSanPham/bongTai3.jfif",
+      "giaGoc": 1700,
+      "loai": "bongTai",
+      "giaGiam": 1456
+    },
+    {
+      "id": "SP23",
+      "tenSanPham": "Bông tai nữ 4",
+      "img": "imgs/anhSanPham/bongTai4.jpg",
+      "giaGoc": 1700,
+      "loai": "bongTai",
+      "giaGiam": 1233
+    },
+    {
+      "id": "SP24",
+      "tenSanPham": "Bông tai nữ 5",
+      "img": "imgs/anhSanPham/bongTai5.webp",
+      "giaGoc": 1700,
+      "loai": "bongTai",
+      "giaGiam": 1222
+    },
+    {
+      "id": "SP25",
+      "tenSanPham": "Bông tai nữ 6",
+      "img": "imgs/anhSanPham/bongTai6.jfif",
+      "giaGoc": 1700,
+      "loai": "bongTai",
+      "giaGiam": 1597
+    },
+    {
+      "id": "SP26",
+      "tenSanPham": "Bông tai nữ 7",
+      "img": "imgs/anhSanPham/bongTai7.jfif",
+      "giaGoc": 1700,
+      "loai": "bongTai",
+      "giaGiam": 1699
+    },
+    {
+      "id": "SP27",
+      "tenSanPham": "Bông tai nữ 8",
+      "img": "imgs/anhSanPham/bongTai8.jfif",
+      "giaGoc": 1700,
+      "loai": "bongTai",
+      "giaGiam": 1669
+    },
+    {
+      "id": "SP28",
+      "tenSanPham": "Bông tai nữ 9",
+      "img": "imgs/anhSanPham/bongTai9.jfif",
+      "giaGoc": 1700,
+      "loai": "bongTai",
+      "giaGiam": 1597
+    },
+    {
+      "id": "SP29",
+      "tenSanPham": "Bông tai nữ 10",
+      "img": "imgs/anhSanPham/bongTai10.png",
+      "giaGoc": 1700,
+      "loai": "bongTai",
+      "giaGiam": 1234
+    },
+    {
+      "id": "SP30",
+      "tenSanPham": "Bông tai nữ 11",
+      "img": "imgs/anhSanPham/bongTai11.jfif",
+      "giaGoc": 1700,
+      "loai": "bongTai",
+      "giaGiam": 1456
+    },
+    {
+      "id": "SP31",
+      "tenSanPham": "Bông tai nữ 12",
+      "img": "imgs/anhSanPham/bongTai12.jfif",
+      "giaGoc": 1700,
+      "loai": "bongTai",
+      "giaGiam": 987
+    },
+    {
+      "id": "SP32",
+      "tenSanPham": "Nhẫn nữ 1",
+      "img": "imgs/anhSanPham/nhan_1.png",
+      "giaGoc": 1700,
+      "loai": "nhan",
+      "giaGiam": 999
+    },
+    {
+      "id": "SP33",
+      "tenSanPham": "Nhẫn nữ 2",
+      "img": "imgs/anhSanPham/nhan_2.png",
+      "giaGoc": 1700,
+      "loai": "nhan",
+      "giaGiam": 259
+    },
+    {
+      "id": "SP34",
+      "tenSanPham": "Nhẫn nữ 3",
+      "img": "imgs/anhSanPham/nhan_3.png",
+      "giaGoc": 1700,
+      "loai": "nhan",
+      "giaGiam": 789
+    },
+    {
+      "id": "SP35",
+      "tenSanPham": "Nhẫn nữ 4",
+      "img": "imgs/anhSanPham/nhan_4.png",
+      "giaGoc": 1700,
+      "loai": "nhan",
+      "giaGiam": 1000
+    },
+    {
+      "id": "SP36",
+      "tenSanPham": "Nhẫn nữ 5",
+      "img": "imgs/anhSanPham/nhan_5.png",
+      "giaGoc": 1700,
+      "loai": "nhan",
+      "giaGiam": 1000
+    },
+    {
+      "id": "SP37",
+      "tenSanPham": "Nhẫn nữ 6",
+      "img": "imgs/anhSanPham/nhan_6.jfif",
+      "giaGoc": 1700,
+      "loai": "nhan",
+      "giaGiam": 1158
+    },
+    {
+      "id": "SP38",
+      "tenSanPham": "Nhẫn nữ 7",
+      "img": "imgs/anhSanPham/nhan_7.jpg",
+      "giaGoc": 1700,
+      "loai": "nhan",
+      "giaGiam": 1234
+    },
+    {
+      "id": "SP40",
+      "tenSanPham": "Nhẫn nữ 9",
+      "img": "imgs/anhSanPham/nhan_9.jfif",
+      "giaGoc": 1700,
+      "loai": "nhan",
+      "giaGiam": 890
+    },
+    {
+      "id": "SP41",
+      "tenSanPham": "Nhẫn nữ 10",
+      "img": "imgs/anhSanPham/nhan_10.jfif",
+      "giaGoc": 1700,
+      "loai": "nhan",
+      "giaGiam": 1700
+    },
+    {
+      "id": "SP42",
+      "tenSanPham": "Nhẫn nữ 11",
+      "img": "imgs/anhSanPham/nhan_11.jfif",
+      "giaGoc": 1700,
+      "loai": "nhan",
+      "giaGiam": 1654
+    },
+    {
+      "id": "aa",
+      "tenSanPham": "aa",
+      "loai": "vongLac",
+      "giaGoc": "1111",
+      "giaGiam": "111",
+      "img": "imgs/anhSanPham/nhan_1.png"
+    }
+  ],
+  "taiKhoan": [
+    {
+      "id": 1,
+      "tenTaiKhoan": "Vinh",
+      "matKhau": "1",
+      "soDienThoai": "0123456789",
+      "diaChi": "Hà Nội"
+    },
+    {
+      "tenTaiKhoan": "1",
+      "matKhau": "1",
+      "soDienThoai": "0123456789",
+      "diaChi": "1",
+      "id": 2
+    },
+    {
+      "tenTaiKhoan": "",
+      "matKhau": "1",
+      "soDienThoai": "7389273987",
+      "diaChi": "sadf",
+      "id": 3
+    },
+    {
+      "tenTaiKhoan": "",
+      "matKhau": "",
+      "soDienThoai": "0134444444",
+      "diaChi": "",
+      "id": 4
+    },
+    {
+      "tenTaiKhoan": "1",
+      "matKhau": "1",
+      "soDienThoai": "0000000000",
+      "diaChi": "1",
+      "id": 5
+    }
+  ],
+  "gioHang": []
+}

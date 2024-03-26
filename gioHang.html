@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="text-align: center; margin-top: 30px;margin-bottom: 30px;">GIỎ HÀNG</h2>
+    <table align="center">
+        <tr> 
+            <th>Ảnh</th>
+        <th>Tên sản phẩm</th>
+        <th>Loại sản phẩm</th>
+        <th>Giá</th>
+       <th>Action</th>
+        </tr>
+        <tr ng-repeat="gioHang in listGioHang">
+           <td><img style="width: 100px;" src="{{gioHang.img}}" alt=""> </td>  
+            <td> <strong>{{gioHang.tenSanPham}}</strong> </td>  
+            <td>{{gioHang.loai}}</td>
+            <td style="color: red;">{{gioHang.giaGiam}}</td>
+          
+            
+            <td ><button ng-click="deleteGioHang(gioHang.id)">DELETE</button></td>
+        </tr>
+    </table>
+    <h5 style="margin-left: 318px;margin-top: 20px;">Tổng tiền :<strong style="margin-left: 700px; color: red;text-decoration: underline;">5000000000 $</strong> </h5> 
+    <button
+          class="btn"
+          style="
+            background-color: rgb(248, 52, 52);
+            color: aliceblue;
+            font-size: larger;
+          "
+          ng-click="muaHetGioHang()"
+          onclick="btnMuaHang()"
+        >
+          Mua hết
+        </button>
+    <style>
+        table{
+    border:1px solid black;
+}
+td{
+    border:1px solid black;
+    width: 200px;
+    text-align: center;
+}
+th{
+    text-align: center;
+}
+
+          .btn {
+        margin-left: 650px;
+        margin-top: 50px;
+            padding: 10px 20px;
+            width: 300px;
+            background-color: blue;
+            color: white;
+            font-size: 16px;
+            border-radius: 30px;
+            border: none;
+            overflow: hidden;
+            transition: transform 0.3s ease-in;
+          }
+          .btn:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+          
+          }
+    </style>
+</body>
+</html>

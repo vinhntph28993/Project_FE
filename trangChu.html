@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LiLi Premium Jewelry</title>
+    <link
+      rel="shortcut icon"
+      type="text/img"
+      href="https://lili.vn/wp-content/uploads/2022/04/VLogo_LiLi_Horizontal_Premium-1.svg"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/css.css" />
+  </head>
+  <body ng-app="myApp">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <div ng-include="'header.html'"></div>
+    <div ng-view></div>
+    <div ng-include="'footer.html'"></div>
+
+    <script>
+      ////////////Controller Tài khoản////////////////////
+      window.taiKhoanController = function ($scope, $http) {
+        $scope.listTaiKhoan = [];
+        $http.get("http://localhost:3000/taiKhoan").then(function (response) {
+          $scope.listTaiKhoan = response.data;
+        });
+////////////Đăng kí////////////////////
+        $scope.nutDangKi = function () {
+          if ($scope.TaiKhoan==null||$scope.MatKhau==null||$scope.NhapLaiMatKhau==null||$scope.SoDienThoai==null||$scope.DiaChi==null) {
+            alert("Đăng kí thì nhập đủ thông tin vào chứ -_-");
+           } else if (!($scope.NhapLaiMatKhau==$scope.MatKhau)){
+            alert("Đăng kí thì nhập mật khẩu giống nhau chứ -_-");
+          } else if (!($scope.NhapLaiMatKhau==$scope.MatKhau)){
+            alert("Đăng kí thì nhập mật khẩu giống nhau chứ -_-");
+          }else if (!($scope.SoDienThoai.length==10)){
+            alert("Số điện thoại phải đủ 10 số chứ -_-");
+           }else {
+          $http.post("http://localhost:3000/taiKhoan", {
+            id: $scope.IDTaiKhoan,
+            tenTaiKhoan: $scope.TaiKhoan,
+            matKhau: $scope.MatKhau,
+            soDienThoai: $scope.SoDienThoai,
+            diaChi: $scope.DiaChi,
+          })
+        .then(function (response) {
+          if (response.status === 201) {
+            alert("Đăng kí thành công");
+          }
+        })
+      }
+    }
+  };
+    ///////////////Hết Controller Tài khoản/////////////////////////////////////////////////
+      // $scope.detail=function(id){$http.get("http://localhost:3000/sanPham/"+id)
+      //   .then(function(response){
+      //     console.log( response);
+      //     $scope.idSanPham=response.data.id;
+      //     $scope.TenSanPham=response.data.tenSanPham;
+      //     $scope.GiaGiam=response.data.giaGiam;
+      //     $scope.GiaGoc=response.data.giaGoc;
+      //     $scope.LoaiSanPham=response.data.loai;
+      //   });
+      // };
+      window.sanPhamController = function ($scope, $http) {
+        $scope.listSanPham = [];
+        $http.get("http://localhost:3000/sanPham").then(function (response) {
+          $scope.listSanPham = response.data;
+        });
+
+        ////////////Sự kiện CRUD////////////////////
+        //////////////////Thêm//////////////////////////////////////////////
+        $scope.addSanPham = function () {
+          if (
+            $scope.idSanPham == null ||
+            $scope.TenSanPham == null ||
+            $scope.LoaiSanPham == null ||
+            $scope.GiaGiam == null ||
+            $scope.GiaGoc == null
+          ) {
+            alert("Điền đầy đủ thông tin vào đi chứ -_-");
+          } else if (
+            parseInt($scope.GiaGiam) <= 0 ||
+            parseInt($scope.GiaGoc) <= 0
+          ) {
+            alert("Giá âm thì lỗ à -_-");
+          } else if (parseInt($scope.GiaGiam) > parseInt($scope.GiaGoc)) {
+            alert("Ô giảm giá hay tăng giá vậy-_-");
+          } else {
+            $http
+              .post("http://localhost:3000/sanPham", {
+                id: $scope.idSanPham,
+                tenSanPham: $scope.TenSanPham,
+                loai: $scope.LoaiSanPham,
+                giaGoc: $scope.GiaGoc,
+                giaGiam: $scope.GiaGiam,
+                img: "imgs/anhSanPham/nhan_1.png",
+              })
+              .then(function (response) {
+                if (response.status === 201) {
+                  alert("Thêm thành công");
+                }
+              });
+          }
+        };
+        $scope.delete = function (id) {
+          $http
+            .delete("http://localhost:3000/sanPham/" + id)
+            .then(function (response) {
+              if (response.statusText == "OK") {
+                alert("Xóa thành công");
+              }
+            });
+        };
+        $scope.detail = function (id) {
+          $http
+            .get("http://localhost:3000/sanPham/" + id)
+            .then(function (response) {
+              console.log(response);
+              $scope.idSanPham = response.data.id;
+              $scope.TenSanPham = response.data.tenSanPham;
+              $scope.GiaGiam = response.data.giaGiam;
+              $scope.GiaGoc = response.data.giaGoc;
+              $scope.LoaiSanPham = response.data.loai;
+              $scope.img = response.data.img;
+            });
+            
+        };
+        $scope.updateSanPham = function (id) {
+          if (
+            $scope.idSanPham == null ||
+            $scope.TenSanPham == null ||
+            $scope.LoaiSanPham == null ||
+            $scope.GiaGiam == null ||
+            $scope.GiaGoc == null
+          ) {
+            alert("Điền đầy đủ thông tin vào đi chứ -_-");
+          } else if (
+            parseInt($scope.GiaGiam) <= 0 ||
+            parseInt($scope.GiaGoc) <= 0
+          ) {
+            alert("Giá âm thì lỗ à -_-");
+          } else if (parseInt($scope.GiaGiam) > parseInt($scope.GiaGoc)) {
+            alert("Ô giảm giá hay tăng giá vậy-_-");
+          } else {
+            $http
+              .put("http://localhost:3000/sanPham/" + $scope.idSanPham, {
+                tenSanPham: $scope.TenSanPham,
+                loai: $scope.LoaiSanPham,
+                giaGoc: $scope.GiaGoc,
+                giaGiam: $scope.GiaGiam,
+                img:$scope.img,
+              })
+              .then(function (response) {
+                if (response.status === 200) alert("Update thành công.");
+              });
+          }
+        };
+      };
+      //////////////trang detail.html//////////////////
+      window.detailController = function ($scope, $http, $routeParams) {
+        var id = $routeParams.id;
+        $http
+          .get("http://localhost:3000/sanPham/" + id)
+          .then(function (response) {
+            $scope.idSanPham = response.data.id;
+            $scope.imgg = response.data.img;
+            $scope.TenSanPham = response.data.tenSanPham;
+            $scope.LoaiSanPham=response.data.loai;
+            $scope.GiaGoc=response.data.giaGoc;
+            $scope.GiaGiam=response.data.giaGiam;
+          });
+          $scope.NemVaogio=function(){
+            $http.post("http://localhost:3000/gioHang",{
+                tenSanPham: $scope.TenSanPham,
+                loai: $scope.LoaiSanPham,
+                img: $scope.imgg,
+                giaGoc: $scope.GiaGoc,
+                giaGiam: $scope.GiaGiam,
+            })
+            .then(function (response) {
+        if (response.status === 201) {
+          alert("Ném gòi nhé 😗");
+        }
+      });
+          }
+      };
+      function btnMuaHang() {
+        alert("Ok nhó 😏😗");
+      }
+      function nemVaogio() { 
+        alert("Ném vào giỏ r đấy 😗");
+      }
+      /////////giỏ hàng///////////////////////
+      window.gioHangController = function ($scope, $http) {
+  $scope.listGioHang = [];
+  $http.get("http://localhost:3000/gioHang").then(function (response) {
+    $scope.listGioHang = response.data;
+  });
+  $scope.deleteGioHang = function (id) {
+    $http
+      .delete("http://localhost:3000/gioHang/" + id)
+      .then(function (response) {
+        if (response.status === 200) {
+          alert("Xóa thành công");
+        }
+      });
+  };
+};
+////////////////////////////////
+      var app = angular.module("myApp", ["ngRoute"]);
+      app.config(function ($routeProvider, $locationProvider) {
+        $locationProvider.hashPrefix("");
+        $routeProvider
+          .when("/home", {
+            templateUrl: "sanPham.html",
+            controller: sanPhamController,
+          })
+          .when("/gioiThieu", {
+            templateUrl: "gioiThieu.html",
+          })
+          .when("/vongLac", {
+            templateUrl: "vongLac.html",
+            controller: sanPhamController,
+          })
+          .when("/dayChuyen", {
+            templateUrl: "dayChuyen.html",
+            controller: sanPhamController,
+          })
+          .when("/nhan", {
+            templateUrl: "nhan.html",
+            controller: sanPhamController,
+          })
+          .when("/bongTai", {
+            templateUrl: "bongTai.html",
+            controller: sanPhamController,
+          })
+          .when("/admin", {
+            templateUrl: "admin.html",
+            controller: sanPhamController,
+          })
+          .when("/gioHang", {
+            templateUrl: "gioHang.html",
+            controller: gioHangController,
+          })
+          .when("/dangKi", {
+            templateUrl: "dangKi.html",
+            controller: taiKhoanController,
+          })
+          .when("/dangNhap", {
+            templateUrl: "dangNhap.html",
+            controller: taiKhoanController,
+          })
+          .when("/doiMatKhau", {
+            templateUrl: "doiMatKhau.html",
+            controller: taiKhoanController,
+          })
+          .when("/quenMatKhau", {
+            templateUrl: "quenMatKhau.html",
+            controller: taiKhoanController,
+          })
+          .when("/detail/:id", {
+            templateUrl: "detail.html",
+            controller: detailController,
+          })
+          .otherwise({
+            redirectTo: "/home",
+          });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,161 @@
+<h1 style="text-align: center">FORM DÀNH CHO ADMIN</h1>
+<div class="container">
+  <table>
+    <tr>
+      <td>ID:</td>
+      <td>
+        <input
+          tabindex="1"
+          style="width: 500px"
+          type="text"
+          ng-model="idSanPham"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>Tên sản phẩm:</td>
+      <td>
+        <input
+          tabindex="2"
+          style="width: 500px"
+          type="text"
+          ng-model="TenSanPham"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>Loại sản phẩm:</td>
+      <td>
+        <select
+          tabindex="3"
+          style="width: 500px; text-align: center"
+          ng-model="LoaiSanPham"
+        >
+          <option value="vongLac" ng-model="LoaiSanPham">Vòng-Lắc</option>
+          <option value="nhan" ng-model="LoaiSanPham">Nhẫn</option>
+          <option value="dayChuyen" ng-model="LoaiSanPham">Dây chuyền</option>
+          <option value="bongTai" ng-model="LoaiSanPham">Bông tai</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Giá bán bình thường:</td>
+      <td>
+        <input
+          tabindex="4"
+          style="width: 500px"
+          type="text"
+          onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+          ng-model="GiaGoc"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>Giá giảm:</td>
+      <td>
+        <input
+          tabindex="5"
+          style="width: 500px"
+          type="text"
+          onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+          ng-model="GiaGiam"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>Img:</td>
+      <td><input style="width: 300px" type="file" id="myFile" /></td>
+    </tr>
+
+    <tr>
+      <td><input type="hidden" ng-model="img"></td>
+      <td>
+        <button
+          tabindex="6"
+          style="width: 150px"
+          class="btn btn-primary"
+          ng-click="addSanPham()"
+        >
+          ADD
+        </button>
+        <button
+          tabindex="7"
+          style="width: 150px"
+          class="btn btn-primary"
+          ng-click="updateSanPham()"
+        >
+          UPDATE
+        </button>
+      </td>
+    </tr>
+  </table>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #2980b9;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  </style>
+
+  <br /><br />
+  <hr />
+  <br /><br />
+  <h1 style="text-align: center">DANH SÁCH SẢN PHẨM</h1>
+  <div style="height: 500px; overflow-y: auto">
+    <table style="height: 600px">
+      <tr style="position: sticky; top: 0">
+        <th>ID</th>
+        <th>Tên sản phẩm</th>
+        <th>Loại sản phẩm</th>
+        <th>Giá bán bình thường</th>
+        <th>Giá giảm</th>
+        <th>Ảnh sản phẩm</th>
+        <th>Action</th>
+      </tr>
+      <tr ng-repeat="sanPham in listSanPham">
+        <td>{{sanPham.id}}</td>
+        <td>{{sanPham.tenSanPham}}</td>
+        <td>{{sanPham.loai}}</td>
+        <td>{{sanPham.giaGoc}}</td>
+        <td>{{sanPham.giaGiam}}</td>
+        <td><img style="width: 50px;" src="{{sanPham.img}}" alt=""></td>
+        <td>
+          <button
+            style="width: 100px"
+            class="btn btn-primary"
+            ng-click="detail(sanPham.id)"
+          >
+            DETAIL
+          </button>
+          <button
+            style="width: 100px"
+            class="btn btn-primary"
+            ng-click="delete(sanPham.id)"
+          >
+            DELETE
+          </button>
+        </td>
+      </tr>
+
+      <!--Thêm các hàng khác tại đây-->
+    </table>
+  </div>
+  <br /><br />
+  <hr />
+  <br />
+  <br />
+</div>

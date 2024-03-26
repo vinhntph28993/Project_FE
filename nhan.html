@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img style="height: 400px; width: 100%;" src="imgs/banner/nhan.png" alt="">
+    <div>
+      <h2 style="text-align: center; margin-top: 30px;margin-bottom: 30px;" >XU HƯỚNG TÌM KIẾM</h2>
+    </div>
+
+    <div class="row container" style="margin-left: 200px">
+      <a href="#nhan" class="col-3" style="text-decoration: none;">
+        <div class="my-card">
+          <img src="imgs/anhSanPham/nhan_5.png" />
+          <h2 style="color: black;text-decoration: none black;">NHẪN</h2>
+        </div></a
+      >
+      <a href="#vongLac" class="col-3" style="text-decoration: none;">
+        <div class="my-card ">
+          <img src="imgs/anhSanPham/vong_lac_1.png" />
+          <h2 style="color: black;text-decoration: none black;">VÒNG - LẮC</h2>
+        </div>
+      </a>
+      <a href="#dayChuyen" class="col-3" style="text-decoration: none;">
+        <div class="my-card ">
+          <img src="imgs/anhSanPham/vong_lac_7.png" />
+          <h2 style="color: black;">DÂY CHUYỀN</h2>
+        </div>
+        </a>
+      
+      <a href="#bongTai" class="col-3" style="text-decoration: none;">
+        <div class="my-card ">
+          <img src="imgs/anhSanPham/bongTai1.jfif" />
+          <h2 style="color: black;text-decoration: none black;">BÔNG TAI</h2>
+        </div>
+      </a>
+     
+    </div>
+    <h2 style="text-align: center; margin-top: 30px;margin-bottom: 30px;">SẢN PHẨM ĐỀ XUẤT</h2>
+    <div class="container">
+      <div class="row">
+        <div class="card col-3" ng-repeat="sanPham in listSanPham" ng-if="sanPham.loai=='nhan'"> <a style="text-decoration: none;color: black;" href="#detail/{{sanPham.id}}">
+          <img src="{{sanPham.img}}" alt="Product Image" />
+          <div class="details">
+            <h2>{{sanPham.tenSanPham}}</h2>
+            <p class="price">{{sanPham.giaGiam}} $<del style="margin-left: 130px;color: gray;">{{sanPham.giaGoc}} $</del></p>
+          </div></a>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
